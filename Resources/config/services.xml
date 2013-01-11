@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="ibrows_wizardannotation.annotation.driver" class="Ibrows\Bundle\WizardAnnotationBundle\Annotation\AnnotationDriver">
+            <argument type="service" id ="annotation_reader" />
+            <argument type="service" id ="ibrows_wizardannotation.annotation.handler" />
+            <argument>Ibrows\Bundle\WizardAnnotationBundle\Annotation\Wizard</argument>
+            <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController" />
+        </service>
+
+        <service id="ibrows_wizardannotation.annotation.handler" class="Ibrows\Bundle\WizardAnnotationBundle\Annotation\AnnotationHandler">
+            <argument type="service" id ="router" />
+        </service>
+    </services>
+
+</container>
