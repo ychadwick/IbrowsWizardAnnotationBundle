@@ -71,12 +71,12 @@ class WizardController extends Controller
     }
 
     /**
-     * @Route("/adress", name="wizard_adress")
+     * @Route("/address", name="wizard_address")
      * @Template
-     * @Wizard(name="adress", number=2, validationMethod="adressValidation")
+     * @Wizard(name="address", number=2, validationMethod="addressValidation")
      * @return array
      */
-    public function adressAction()
+    public function addressAction()
     {
         return array();
     }
@@ -84,7 +84,7 @@ class WizardController extends Controller
     /**
      * @return bool
      */
-    public function adressValidation()
+    public function addressValidation()
     {
         /**
          * Do your checks if this step is valid and return a Response/RedirectResponse or Wizard::REDIRECT_STEP_BACK
