@@ -193,7 +193,7 @@ class AnnotationHandler
      * @return Wizard
      * @throws \RuntimeException
      */
-    protected function getCurrentActionAnnotation()
+    public function getCurrentActionAnnotation()
     {
         foreach($this->annotations as $annotation){
             if($annotation->isCurrentMethod()){
