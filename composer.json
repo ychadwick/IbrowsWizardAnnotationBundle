@@ -17,6 +17,5 @@
     "autoload": {
         "psr-0": { "Ibrows\\Bundle\\WizardAnnotationBundle": "" }
     },
-    "target-dir": "Ibrows/Bundle/WizardAnnotationBundle",
     "minimum-stability": "dev"
 }
